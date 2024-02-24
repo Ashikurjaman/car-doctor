@@ -17,11 +17,14 @@ const Navbar = () => {
     });
   }
   const navItems = <>
-        <li><Link to={'/'}>Home</Link></li>
-        <li><Link to={'/'}>Services</Link></li>
+        <li><Link className="font-bold" to={'/'}>Home</Link></li>
+        <li><Link className="font-bold" to={'/'}>Services</Link></li>
+        
+        <li><Link className="font-bold" to={'/blog'}>Blog</Link></li>
+        <li><Link className="font-bold" to={'/contact'}>Contact</Link></li>
         {
-          user? <li onClick={handelLogout}><Link>logout</Link></li>:
-          <li><Link to={'/login'}>Login</Link></li>
+          user? <li className="font-bold" onClick={handelLogout}><Link>logout</Link></li>:
+          <li><Link className="font-bold" to={'/login'}>Login</Link></li>
         }
   </>
   
